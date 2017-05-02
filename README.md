@@ -3,6 +3,8 @@
 
 http://flora.sourceforge.net/
 
+Eclipse vizualizer plugin: http://flora.sourceforge.net/visualizer
+
 ### doc
 
 Michael Kifer
