@@ -1,2 +1,37 @@
-// Symbolic object model
+// Symbolic object model (C++ synthesis)
+
+// core data model
+
+object[tag:string, val:string].	// any object have <tag:val>
+
+object::class.					// class is-a object
+
+object::scalar.					// scalar is-a object
+
+scalar::symbol.					// primitive scalars
+scalar::string.
+scalar::number.
+integer::number.
+fixpoint::integer.			// fixed point number
+money::fixpoint.			// .4 fixpoint type for money accounting
+
+hex::integer.				// machine integers
+bin::integer.
+
+object::vector.					// vector is-a object
+stack::vector.				// FIDO stack
+queue::vector.				// LIFI queue
+map::vector.				// key/value mapping array
+
+object::pair.					// cons pair for classic lists
+
+file::object.					// File I/O
+dir::file.						// directory
+
+// element inheritance rule
+//?C[tag,val] :- ?A[tag,val]::?B[tag,val].	// tag:val must be total inherited
+
+// unit tests
+
+//?x[tag]. ?y[val]. ?z[tag,val].		// must be all types
 
