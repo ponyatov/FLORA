@@ -1,29 +1,36 @@
 // Symbolic object model (C++ synthesis)
 
+// C++ primitive types
+
+C_type::primitive.				// pure C primitive type
+Cpp_type::C_type.				// C++ primitive type
+
+c_string::Cpp_type.
+
 // core data model
 
-object[tag:string, val:string].	// any object have <tag:val>
+object[tag:c_string, val:c_string].	// any object have <tag:val>
 
-object::class.					// class is-a object
+class::object.					// class ako object
 
-object::scalar.					// scalar is-a object
+scalar::object.					// scalar ako object
 
-scalar::symbol.					// primitive scalars
-scalar::string.
-scalar::number.
+symbol::scalar.					// primitive scalars
+string::scalar.
 integer::number.
-fixpoint::integer.			// fixed point number
-money::fixpoint.			// .4 fixpoint type for money accounting
+hex::integer.					// machine integers
+bin::integer.	
+number::scalar.					// floating point number (engeneering apps)
+fixpoint::integer.				// fixed point number ( accounting apps )
+money::fixpoint.				// .4 fixpoint type for money 
 
-hex::integer.				// machine integers
-bin::integer.
 
-object::vector.					// vector is-a object
-stack::vector.				// FIDO stack
-queue::vector.				// LIFI queue
-map::vector.				// key/value mapping array
+vector::object.					// vector ako object
+stack::vector.					// FIFO stack
+queue::vector.					// LIFI queue
+map::vector.					// key/value mapping array
 
-object::pair.					// cons pair for classic lists
+pair::object.					// cons pair for classic lists
 
 file::object.					// File I/O
 dir::file.						// directory
