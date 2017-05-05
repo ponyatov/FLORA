@@ -1,5 +1,19 @@
 // Symbolic object model (C++ synthesis)
 
+
+obj[|tag,val|].
+
+scalar::obj.
+
+symbol::scalar.
+number::scalar.
+string::scalar.
+
+// test
+
+// ?- ?any[tag]. // query any tagged items: must be all types
+
+
 // C++ primitive types
 
 C_type::primitive.				// pure C primitive type

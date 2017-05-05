@@ -1,14 +1,3 @@
 // tutorial
 
-obj[|tag,val|].
-
-scalar::obj.
-
-symbol::scalar.
-number::scalar.
-string::scalar.
-
-// test
-
-?- ?any[tag]. // query any tagged items: must be all types
 
