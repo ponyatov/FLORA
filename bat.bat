@@ -1,4 +1,4 @@
 @start D:\FLORA\flora2\runflora.bat 
 @git gui
-@gvim -p Sym.flr flr.flr
+@gvim -p Ergo.flr Sym.flr flr.flr
 
